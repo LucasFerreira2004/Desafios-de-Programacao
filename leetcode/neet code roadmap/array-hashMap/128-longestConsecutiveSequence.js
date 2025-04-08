@@ -14,7 +14,7 @@ var longestConsecutive = function(nums) {
         while(set.has(num + sequence)){
             sequence++;
         }
-        maxSequence = Math.max(maxSequence, sequence);
+        if (sequence > maxSequence) maxSequence = sequence;
     }
 
     return maxSequence;
